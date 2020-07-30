@@ -1,5 +1,5 @@
-# Timelapse creator for Synology Surveillance Station
-
+# Timelapse creator
+forked from edv/docker-timelapse
 ## Introduction
 
 I use Synology Surveillance Station with a couple of IP cameras. Surveillance Station is configured to create a snaphot every 2 minutes on each of these cameras. These snapshots are used by this Docker image to create a timelapse when the day is over.
