@@ -44,7 +44,7 @@ DATE_FORMATTED=$(date +%Y%m%d --date '-'$DAYS_BACK' day')
 
 if [ $FORMAT = "mp4" ]; then
     echo "Busy creating timelapse in mp4 format"
-    ffmpeg -hide_banner -v 16 -r 24 -pattern_type glob -i "/input/$PATTERN-$DATE_FORMATTED-*.jpg" -vf scale=$RESOLUTION1:$RESOLUTION2 -aspect 16:9 -vcodec libx264 -y /output/$PATTERN-$DATE_FORMATTED.$FORMAT
+    ffmpeg -hide_banner -v 16 -r 24 -pattern_type glob -i "/input/$PATTERN-$DATE_FORMATTED-*.jpg" -vf scale=$RESOLUTION1:$RESOLUTION2 -vcodec libx264 -y /output/$PATTERN-$DATE_FORMATTED.$FORMAT
     echo "Done...."
 elif [ $FORMAT = "gif" ]; then
     # create a mp4 first and palette based on this secondly, this results in significant improved output
